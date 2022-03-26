@@ -7,7 +7,7 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.libraryappui.ui.screens.ScreenOne
+import com.example.libraryappui.ui.screens.MainScreen
 import com.example.libraryappui.ui.theme.LibraryAppUITheme
 
 class MainActivity : ComponentActivity() {
@@ -30,7 +30,7 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun MainApp() {
-    ScreenOne()
+    MainScreen()
 }
 
 @Preview(showBackground = true)

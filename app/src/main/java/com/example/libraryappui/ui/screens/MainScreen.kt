@@ -11,7 +11,6 @@ import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowForward
 import androidx.compose.material.icons.filled.MoreVert
-import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -25,15 +24,18 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.libraryappui.R
 import com.example.libraryappui.bookItems
 import com.example.libraryappui.myBookItems
+import com.example.libraryappui.ui.components.TopBarIconButton
+import com.example.libraryappui.ui.components.TopBarImage
+import com.example.libraryappui.ui.components.TopBarMainText
+import com.example.libraryappui.ui.components.TopBarSecondaryText
 import com.example.libraryappui.ui.theme.RalewayFamily
 
 @OptIn(ExperimentalMaterialApi::class)
 @Preview(showBackground = true)
 @Composable
-fun ScreenOne() {
+fun MainScreen() {
     val sheetState = rememberBottomSheetScaffoldState()
 
     BottomSheetScaffold(
@@ -172,55 +174,6 @@ fun NewArrivalsRow() {
             Icon(imageVector = Icons.Filled.ArrowForward, contentDescription = "View All")
         }
     }
-}
-
-@Composable
-fun TopBarMainText() {
-    Box() {
-        UIText(
-            text = "20",
-            fontSize = 28.sp,
-            modifier = Modifier.padding(end = 10.dp),
-        )
-    }
-}
-
-@Composable
-fun TopBarSecondaryText() {
-    Column() {
-        UIText(
-            text = "Thru",
-            color = Color.Gray,
-            modifier = Modifier.padding(end = 10.dp),
-            fontWeight = FontWeight.Bold
-        )
-        UIText(
-            text = "March 24",
-            color = Color.Gray,
-            modifier = Modifier.padding(end = 10.dp),
-        )
-    }
-}
-
-@Composable
-fun TopBarIconButton() {
-    Box() {
-        IconButton(onClick = { /*TODO*/ }) {
-            Icon(imageVector = Icons.Filled.Notifications, contentDescription = "Notify")
-        }
-    }
-}
-
-@Composable
-fun TopBarImage() {
-    Image(
-        painter = painterResource(id = R.drawable.cesar_rincon_profile_pic),
-        contentDescription = "Profile Picture",
-        modifier = Modifier
-            .size(60.dp)
-            .padding(start = 10.dp)
-            .clip(shape = RoundedCornerShape(100.dp))
-    )
 }
 
 @Composable
